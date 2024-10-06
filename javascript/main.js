@@ -1,53 +1,73 @@
-document.querySelectorAll('.btnDetail').forEach(item=>{
+document.querySelectorAll('.btnDetail').forEach(item => {
     item.addEventListener('click', (e) => {
         let parent = e.target.parentNode.parentNode;
         let gambar = parent.querySelector('.card-img-top').src;
         let harga = parent.querySelector('.harga').innerText;
         let judul = parent.querySelector('.card-title').innerText;
         let deskawal = parent.querySelector('.card-text').innerText;
-        //untuk ktrngan jika tidak ada deskripsi
-        let deskripsi = parent.querySelector('.deskripsi')? parent.querySelector('.deskripsi').innerText:'tidak ada infomrasi'; 
+        let deskripsi = parent.querySelector('.deskripsi') ? parent.querySelector('.deskripsi').innerText : 'tidak ada informasi';
 
-        //console.log(`judul ${judul}`);
-        //console.log(`gambar ${gambar}`);
-        //console.log(`harga: ${harga}`);
-        //console.log(`deskawal: ${deskawal}`);
-        //console.log(`deskripsi: ${deskripsi}`);
-        
-
-        //bagian klik tombol modal 
-
+        // Bagian klik tombol modal 
         let tombolModal = document.querySelector('.btnModal');
         tombolModal.click();
 
-        //menampilkan Judul di modal
+        // Menampilkan Judul di modal
         document.querySelector('.modalTittle').innerText = judul;
 
-        //menampilkan gambar di modal
+        // Menampilkan gambar di modal
         let image = document.createElement('img');
         image.src = gambar;
         image.classList.add('w-100');
-        document.querySelector('.modalImage').innerHTML = '' ;
+        document.querySelector('.modalImage').innerHTML = '';
         document.querySelector('.modalImage').appendChild(image);
 
-        //Menampilkan Deskripsi
+        // Menampilkan Deskripsi
         document.querySelector('.modalDeskripsi').innerText = deskripsi;
 
-        //Menampilkan harga
+        // Menampilkan harga
         document.querySelector('.modalharga').innerText = harga;
 
-        const nohp = '6289625382065';
-        let pesan = `https://api.whatsapp.com/send?phone=${nohp}&text=Halo kak, saya mau pesan produk dengan detail berikut:%0A
-        *Isi Data* %0A
-        Nama: %0A
-        Alamat: %0A
-        Judul Desain: ${judul}%0A
-        Harga: ${harga} %0A
-        Metode Pembayaran DANA/REK/COD : `;
+        // Tombol pesan WhatsApp
+        function sendwhatsapp() {
+            var phonenumber = "+6289625382065";
 
-        document.querySelector('.btnPesan').href = pesan;
+            // diambil dari class html
+            var name = document.querySelector(".name").value;
+            var alamat = document.querySelector(".alamat").value;
+            var catatan = document.querySelector(".catatan").value;
 
+            // Menggabungkan detail produk dan informasi pengguna
+            var pesan = 
+            `Halo kak, saya mau pesan jasa 
+            dengan detail berikut:
+            =============================
+            *Judul Desain:* ${judul}
+            *Harga       :* ${harga}
 
-     });
+            *Data Diri*
+            *Nama   :* ${name}
+            *Alamat :* ${alamat}
+            *Catatan:* ${catatan}`;
 
+            // Membuat URL WhatsApp
+            var urlWhatsApp = `https://wa.me/${phonenumber}?text=${encodeURIComponent(pesan)}`;
+            
+            // Membuka WhatsApp dengan pesan
+            window.open(urlWhatsApp, '_blank').focus();
+
+            // Refresh halaman setelah 1 detik
+            setTimeout(() => {
+                location.reload();
+            }, 1000); // waktu dalam milidetik  
+        }
+        
+        // Menambahkan event listener untuk tombol sendwhatsapp
+        document.querySelector('.sendwhatsapp').addEventListener('click', sendwhatsapp);
+
+        // Event listener untuk merefresh halaman saat modal ditutup
+        var exampleModal = document.getElementById('exampleModal');
+        exampleModal.addEventListener('hidden.bs.modal', function () {
+        location.reload(); // Merefresh halaman
+        });
+    });
 });
