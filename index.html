@@ -200,13 +200,20 @@
             <div class="modalDeskripsi mb-4 fs-"></div>
             <div class="d-md-flex">
               <form>
-                <label for="">Name</label>
+                <label for="">Nama</label>
                 <input type="text" class="name">
           
                 <label for="">Alamat</label>
-                <input type="text" class="alamat">
-          
-                <label for="">Pesan</label>
+                <input type="text" class="alamat" >
+
+                <label for="">Metode Pembayaran</label>
+                <select class="metode-pembayaran">
+                    <option value="Cod">Cash on Delivery (COD)</option>
+                    <option value="Dana (089625382065)">Dana (089625382065)</option>
+                    <option value="Rek 17909014495 SumselBabel">Transfer Rekening 17909014495 SumselBabel</option>
+                </select>
+
+                <label for="">Catatan(Request)</label>
                 <textarea class="catatan"></textarea>
                 <button type="button" class="sendwhatsapp" onclick="sendwhatsapp();">Send Via WhatsApp</button>
               </form>
