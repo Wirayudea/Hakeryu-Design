@@ -43,13 +43,15 @@ document.querySelectorAll('.btnDetail').forEach(item => {
             =============================
             *Judul Desain:* ${judul}
             *Harga       :* ${harga}
-
+            =============================
             *Data Diri*
             *Nama   :* ${name}
             *Alamat :* ${alamat}
             *Metode Pembayaran :* ${metodepembayaran}
             *Catatan:* ${catatan}
-            =============================`;
+            =============================
+            No Dana : 089625382065
+            No Rek  : 17909014495(Sumsel)`;
 
             // Membuat URL WhatsApp
             var urlWhatsApp = `https://wa.me/${phonenumber}?text=${encodeURIComponent(pesan)}`;
