@@ -119,6 +119,7 @@ input[type="submit"]:hover {
 .map-container {
   position: relative; /* Memungkinkan penyesuaian posisi iframe */
   overflow: hidden; /* Menyembunyikan bagian yang melampaui */
+  margin-top: 20px; /* Menambahkan jarak atas untuk memindahkan peta ke bawah */
 }
 
 .map-container iframe {
