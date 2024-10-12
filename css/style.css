@@ -1,15 +1,23 @@
 *{
     font-family: Arial, sans-serif;
   }
+
   form{
     margin: 15px 5px;
     width: 500px;
     font-size: 16px;
   }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   form label{
     display: block;
     margin-bottom: 5px;
   }
+
   form input, form textarea, form select{
     width: 95%;
     padding: 5px;
@@ -17,6 +25,7 @@
     box-sizing: border-box;
     resize: vertical;
   }
+
   form button{
     background: #4CAF50;
     color: white;
@@ -25,6 +34,84 @@
     border: none;
     cursor: pointer;
   }
+  
   form button:hover{
     background: green;
   }
+
+
+  .colemail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* Lebar maksimum form */
+    margin: auto; /* Pusatkan form */
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Memenuhi lebar kolom */
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.contact-info {
+    font-size: 1.1em; /* Ukuran font yang sedikit lebih besar */
+    color: #333; /* Warna teks yang lebih gelap */
+    margin: 10px auto; /* Jarak atas dan bawah, dengan auto untuk pusatkan */
+    padding: 10px; /* Padding di dalam paragraf */
+    background-color: #e7f3ff; /* Latar belakang berwarna lembut */
+    border-radius: 4px; /* Sudut yang melengkung */
+    line-height: 1.6; /* Jarak antar baris yang lebih baik */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk kedalaman */
+}
+
+.areapesan {
+  width: 100%; /* Atur lebar textarea sesuai kebutuhan */
+  max-width: 600px; /* Lebar maksimum untuk menjaga tampilan */
+}

@@ -72,8 +72,27 @@ document.querySelectorAll('.btnDetail').forEach(item => {
         var exampleModal = document.getElementById('exampleModal');
         exampleModal.addEventListener('hidden.bs.modal', function () {
         location.reload(); // Merefresh halaman
-
-        
         });
+    });
+
+});
+
+const btn = document.getElementById('buttonEmail');
+document.getElementById('formEmail')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_1twbuoe';
+   const templateID = 'template_bneb2km';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Pesan Terkirim Ke Email!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
     });
 });
