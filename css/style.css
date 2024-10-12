@@ -115,3 +115,17 @@ input[type="submit"]:hover {
   width: 100%; /* Atur lebar textarea sesuai kebutuhan */
   max-width: 600px; /* Lebar maksimum untuk menjaga tampilan */
 }
+
+.map-container {
+  position: relative; /* Memungkinkan penyesuaian posisi iframe */
+  overflow: hidden; /* Menyembunyikan bagian yang melampaui */
+}
+
+.map-container iframe {
+  position: absolute; /* Memungkinkan penyesuaian posisi */
+  top: 0; /* Menetapkan posisi atas */
+  left: 0; /* Menetapkan posisi kiri */
+  width: 100%; /* Memastikan lebar 100% dari container */
+  height: 100%; /* Memastikan tinggi 100% dari container */
+  border: 0; /* Menghilangkan border default */
+}
