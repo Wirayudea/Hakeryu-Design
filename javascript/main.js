@@ -88,11 +88,54 @@ document.getElementById('formEmail')
    const templateID = 'template_bneb2km';
 
    emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Pesan Terkirim Ke Email!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
+        .then(() => {
+            btn.value = 'Send Email';
+            alert('Pesan Terkirim Ke Email!');
+            // Refresh halaman setelah sukses
+            window.location.reload(); // Ini akan merefresh halaman
+        }, (err) => {
+            btn.value = 'Send Email';
+            alert(JSON.stringify(err));
+        });
 });
+
+function searchCard() {
+    let input = document.getElementById('search-input').value.toLowerCase();
+    let cards = document.getElementsByClassName('card');
+    let found = false; // Flag untuk mengecek apakah ada kartu yang cocok
+    let refreshButton = document.getElementById('refresh-button');
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].querySelector('.card-title').textContent.toLowerCase();
+        if (title.includes(input)) {
+            cards[i].parentElement.style.display = "block"; // Tampilkan kartu yang cocok
+            if (!found) {
+                cards[i].scrollIntoView({ behavior: 'smooth', block: 'center' }); // Gulir ke kartu yang cocok
+                found = true; // Set flag menjadi true
+            }
+        } else {
+            cards[i].parentElement.style.display = "none"; // Sembunyikan kartu yang tidak cocok
+        }
+    }
+
+    // Tampilkan pesan jika tidak ada hasil yang ditemukan
+    if (!found) {
+        alert("Tidak ada hasil yang ditemukan."); // Pesan jika tidak ada hasil
+    }
+
+    // Tampilkan tombol "Kembali" setelah pencarian
+    refreshButton.style.display = "inline-block"; // Selalu tampilkan tombol Kembali
+}
+
+
+
+function refreshPage() {
+    location.reload(); // Reload halaman
+}
+
+
+
+
+
+
+

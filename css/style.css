@@ -2,6 +2,13 @@
     font-family: Arial, sans-serif;
   }
 
+  .navbar {
+    position: fixed; /* Menjadikan navbar tetap di tempat */
+    top: 20; /* Menempatkan navbar di bagian atas */
+    width: 100%; /* Memastikan navbar lebar penuh */
+    z-index: 1000; /* Menempatkan navbar di atas elemen lain */
+  }
+
   form{
     margin: 15px 5px;
     width: 500px;

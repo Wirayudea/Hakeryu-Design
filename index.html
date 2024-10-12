@@ -11,19 +11,29 @@
   <body class="bg-white">
     <div class="container-fluid p-0 mb-4 mt-2 rounded-4 shadow bg-white">
         <!-- Menu -->
-        <nav class="navbar navbar-expand-md navbar-light shadow rounded-4 mb-4">
+        <nav class="navbar navbar-expand-md navbar-light shadow rounded-4 mb-4 bg-white">
             <div class="container-fluid">
                 <!-- Brand -->
-                <a class="navbar-brand fw-bold" href="#">Hakeryu Design</a>
-
+                <a class="navbar-brand fw-bold" href="/index.html">Hakeryu Design</a>
+        
                 <!-- Button toggle for small screens -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+        
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item ms-3">
+                            <div class="d-flex" style="max-width: 300px;">
+                                <input id="search-input" class="form-control form-control-sm me-2" type="text" placeholder="Cari" aria-label="Search">
+                                <button class="btn btn-outline-primary btn-sm" type="button" onclick="searchCard()">Cari</button>
+                                <button id="refresh-button" class="btn btn-outline-danger btn-sm ms-2" type="button" onclick="refreshPage()" style="display: none;">Kembali</button> <!-- Tombol Close -->
+                            </div>
+                        </li>
+                        
+                        <div id="search-results" class="mt-2"></div> <!-- Kontainer hasil -->
+                        
                         <li class="nav-item">
                             <a href="#Jasa Kami" class="nav-link text-dark fw-bold">Jasa Kami</a>
                         </li>
@@ -31,14 +41,19 @@
                             <a href="#Tentang" class="nav-link text-dark fw-bold">Tentang Kami</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#Contact Us" class="nav-link text-dark fw-bold">Contact Us</a>
+                            <a href="#Contact Us" class="nav-link text-dark fw-bold">Hubungi Kami</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        
     </div>
 
+        <!-- agar banner tidak tertindih navbar -->
+        <div class="px-4 mb-5" style="color: white;">
+            Spasi 
+        </div>
 
         <!-- Banner -->
          <div class="px-4 mb-4">
