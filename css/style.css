@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 *{
     font-family: Arial, sans-serif;
   }
@@ -136,4 +138,97 @@ input[type="submit"]:hover {
   width: 100%; /* Memastikan lebar 100% dari container */
   height: 100%; /* Memastikan tinggi 100% dari container */
   border: 0; /* Menghilangkan border default */
+}
+
+
+/* TENTANG KAMI */
+.overlay-texttentang {
+  position: absolute; /* Mengatur posisi teks menjadi absolut */
+  top: 50%; /* Menempatkan teks di tengah secara vertikal */
+  left: 50%; /* Menempatkan teks di tengah secara horizontal */
+  transform: translate(-50%, -50%); /* Menggeser teks agar tepat di tengah */
+  color: white; /* Warna teks */
+  font-weight: bold; /* Membuat teks menjadi tebal */
+  text-align: center; /* Pusatkan teks */
+  font-size: 5vw; /* Ukuran font */
+  padding: 5px; /* Tambahkan padding untuk teks */
+  border-radius: 5px; /* Buat sudut latar belakang teks menjadi bulat */
+}
+
+.text-blueh {
+  color: blue; /* Warna teks untuk Hakeryu */
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.7);
+}
+
+.text-whited {
+  color: white; /* Warna teks untuk Design */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+
+#bgtentang{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Atur lebar gambar agar memenuhi lebar elemen induk */
+  height: auto; /* Tinggi otomatis untuk menjaga rasio aspek */
+  max-height: 300px; /* Atur tinggi maksimum gambar sesuai kebutuhan */
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#bgtentang::before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height:200px;
+  width: 100%;
+  background:linear-gradient(to top,#ffffff,transparent);
+  z-index: 1000;
+}
+
+#Tentang{
+  padding-bottom:100px;
+  font-family: 'Montserrat', serif;
+}
+
+#Tentang h2{
+  font-size: 4vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color:#2b73ae;
+  font-family: 'Montserrat', serif;
+  box-sizing: border-box;
+  font-weight: 550;
+  padding-left: 4%;
+}
+
+#Tentang p{
+font-size: 1.2rem;
+line-height:2rem;
+font-weight:300;
+color:#20496a;
+}
+
+.tentangkami {
+  margin-bottom: 20px; /* Atur jarak yang diinginkan */
+  text-align: justify;
+  font-family: 'Montserrat', serif;
+}
+
+.tujuankami {
+  margin-top: 20px; /* Ini juga bisa digunakan untuk menambah jarak */
+  text-align: justify;
+  font-family: 'Montserrat', serif;
+}
+
+.tentangkami, .tujuankami {
+  padding-left: 5%; /* Atur padding untuk paragraf */
+  padding-right: 60px;
 }
