@@ -266,3 +266,10 @@ color:#20496a;
 .ukuran-gambar:hover {
   transform: scale(1.1); /* Memperbesar gambar saat hover */
 }
+
+/* Media queries untuk layar mobile */
+@media (max-width: 768px) {
+  .ukuran-gambar:hover {
+      transform: scale(1.4); /* Memperbesar lebih besar pada tampilan mobile */
+  }
+}
