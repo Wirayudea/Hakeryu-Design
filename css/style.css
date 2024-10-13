@@ -11,6 +11,18 @@
     z-index: 1000; /* Menempatkan navbar di atas elemen lain */
   }
 
+  .logo-image {
+    height: 50px; /* Atur tinggi gambar sesuai kebutuhan */
+    width: auto; /* Biarkan lebar otomatis untuk mempertahankan proporsi */
+    transition: transform 0.3s; /* Efek transisi saat hover */
+    z-index: 20;
+    padding-left: 20px;
+  }
+
+  .logo-image:hover {
+    transform: scale(1.1); /* Memperbesar gambar saat hover */
+  }
+
   form{
     margin: 15px 5px;
     width: 500px;
@@ -190,7 +202,7 @@ input[type="submit"]:hover {
   height:200px;
   width: 100%;
   background:linear-gradient(to top,#ffffff,transparent);
-  z-index: 1000;
+  z-index: 100;
 }
 
 #Tentang{
@@ -231,4 +243,25 @@ color:#20496a;
 .tentangkami, .tujuankami {
   padding-left: 5%; /* Atur padding untuk paragraf */
   padding-right: 60px;
+}
+
+.cara-order{
+  font-size: 4vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color:#0d84e5;
+  font-family: 'Montserrat', serif;
+  box-sizing: border-box;
+  font-weight: 550;
+  padding-left: 4%;
+}
+
+.ukuran-gambar {
+  width: 3000px; /* Atur lebar gambar sesuai kebutuhan */
+  height: auto; /* Biarkan tinggi otomatis untuk mempertahankan proporsi */
+  transition: transform 0.3s; /* Efek transisi saat hover */
+}
+
+.ukuran-gambar:hover {
+  transform: scale(1.1); /* Memperbesar gambar saat hover */
 }
