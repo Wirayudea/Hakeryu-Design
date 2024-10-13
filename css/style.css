@@ -2,6 +2,7 @@
 
 *{
     font-family: Arial, sans-serif;
+    
   }
 
   .navbar {
@@ -10,6 +11,32 @@
     width: 100%; /* Memastikan navbar lebar penuh */
     z-index: 1000; /* Menempatkan navbar di atas elemen lain */
   }
+
+  .navbartools{
+  padding-left: 10px;
+  padding-right: 1px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Efek transisi untuk perubahan warna */
+  }
+
+  .navbartools .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder; /* Menambahkan ketebalan teks */
+    color: #0730d4; /* Ganti dengan warna yang diinginkan */
+    text-shadow: 2px 2px 5px rgba(77, 74, 74, 0.3);
+    -webkit-text-stroke: 0.4px #ffffff;
+  }
+
+  .nav-link:hover {
+    color: #0077ff; /* Ganti dengan warna saat hover */
+    transform: scale(1.2);
+  }
+
+  .pencarian{
+    padding-right: 4px;
+  }
+
 
   .logo-image {
     height: 50px; /* Atur tinggi gambar sesuai kebutuhan */
@@ -20,7 +47,7 @@
   }
 
   .logo-image:hover {
-    transform: scale(1.1); /* Memperbesar gambar saat hover */
+    transform: scale(1.2); /* Memperbesar gambar saat hover */
   }
 
   form{
