@@ -128,10 +128,11 @@ function searchCard() {
 }
 
 
-
 function refreshPage() {
     location.reload(); // Reload halaman
-}
+} 
+
+
 
 
 

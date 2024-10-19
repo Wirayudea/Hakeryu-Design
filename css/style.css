@@ -49,7 +49,7 @@
   .logo-image:hover {
     transform: scale(1.2); /* Memperbesar gambar saat hover */
   }
-
+  
   form{
     margin: 15px 5px;
     width: 500px;
@@ -204,7 +204,6 @@ input[type="submit"]:hover {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
-
 #bgtentang{
   position: relative;
   width: 100%;
@@ -299,4 +298,29 @@ color:#20496a;
   .ukuran-gambar:hover {
       transform: scale(1.5); /* Memperbesar lebih besar pada tampilan mobile */
   }
+}
+
+/* Bagian CARD */
+.card-title {
+  text-shadow: 2px 2px 5px rgba(0, 194, 247, 0.528);
+}
+
+/* MODAL */
+.modalTittle {
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 194, 247, 0.528);
+}
+
+.modalDeskripsi{
+  margin-top: 10px;
+}
+
+.catatanModal {
+  font-style: italic;
+  font-weight: 200;
+}
+
+.dataDiri {
+  text-align: center;
+  font-weight: bold;
 }
