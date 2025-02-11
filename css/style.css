@@ -12,6 +12,10 @@
     z-index: 1000; /* Menempatkan navbar di atas elemen lain */
   }
 
+  .navbar-nav{
+  padding-right: 40px;
+  }
+
   .navbartools{
   padding-left: 10px;
   padding-right: 1px;
@@ -26,15 +30,21 @@
     color: #0730d4; /* Ganti dengan warna yang diinginkan */
     text-shadow: 2px 2px 5px rgba(77, 74, 74, 0.3);
     -webkit-text-stroke: 0.4px #ffffff;
+    padding: 2px;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid #0077ff00;
   }
 
-  .nav-link:hover {
-    color: #0077ff; /* Ganti dengan warna saat hover */
-    transform: scale(1.2);
+  .navbartools .nav-link:hover, 
+  .navbartools .nav-link.active {
+      border-bottom: 1px solid #0084ff;
+      color: #0077ff;
+      transform: scale(1.1);
   }
 
   .pencarian{
-    padding-right: 4px;
+    padding-right: 10px;
   }
 
 
@@ -146,6 +156,17 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #0056b3;
+}
+
+.keterangan-waktu {
+  font-size: 1.1em; /* Ukuran font yang sedikit lebih besar */
+  color: #333; /* Warna teks yang lebih gelap */
+  margin: 10px auto; /* Jarak atas dan bawah, dengan auto untuk pusatkan */
+  padding: 10px; /* Padding di dalam paragraf */
+  background-color: #e7f3ff; /* Latar belakang berwarna lembut */
+  border-radius: 4px; /* Sudut yang melengkung */
+  line-height: 1.6; /* Jarak antar baris yang lebih baik */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk kedalaman */
 }
 
 .contact-info {

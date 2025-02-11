@@ -11,7 +11,7 @@
   </head>
 
   <body class="bg-white">
-    <!--Navbar-->
+    <!-- Navbar -->
     <div class="container-fluid p-0 mb-4 rounded-4 shadow bg-white">
         <!-- Menu -->
         <nav class="navbar navbar-expand-md navbar-light shadow rounded-4 mb-4 bg-white">
@@ -37,15 +37,17 @@
                             </div>
                         </li>
                         <div id="search-results" class="mt-2"></div> <!-- Kontainer hasil -->
-                        
                         <li class="navbartools nav-item">
-                            <a href="#Jasa Kami" class="nav-link ">Jasa Kami</a>
+                            <a href="/index.html" class="nav-link active ">Home</a>
                         </li>
                         <li class="navbartools nav-item">
-                            <a href="#Tentang" class="nav-link ">Tentang Kami</a>
+                            <a href="/contoh-desain.html" class="nav-link">Contoh Desain</a>
                         </li>
                         <li class="navbartools nav-item">
-                            <a href="#Contact Us" class="nav-link ">Hubungi Kami</a>
+                            <a href="/about-us.html" class="nav-link ">About Us</a>
+                        </li>
+                        <li class="navbartools nav-item">
+                            <a href="/contact-us.html" class="nav-link ">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -73,6 +75,11 @@
           Hakeryu Design berkomitmen membantu individu maupun bisnis dalam mewujudkan ide-ide kreatif mereka. 
           Kami menawarkan berbagai layanan, mulai dari desain logo, branding, hingga jasa edit foto produk dan acara.
         </div>
+
+        <div class="keterangan-waktu text-center">
+            "Estimasi lama waktu pengerjaan untuk Desain Logo, Desain Poster/Banner,ganti warna background, Desain Spanduk,
+             lama pengerjaan(1-2 Hari), dan untuk desain undangan digital, desain gambar kartun (bisa sampai 3-5 hari)."
+          </div>
 
         <!-- Jasa Jasa -->
        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gx-5 p-5">
@@ -134,7 +141,7 @@
                 <div class="d-none deskripsi"><p> Kami menyediakan layanan fleksibel memungkinkan Anda untuk mengajukan request khusus dalam pengeditan desain. Baik itu revisi desain, penambahan elemen grafis, atau perubahan layout, kami siap memenuhi kebutuhan desain Anda.</p></div>
                 <div class="card-footer mt-auto d-md-flex">
                     <a class="btn btn-sm btn-primary d-block btnDetail"> Detail </a>
-                    <span class="ms-auto text-black fw-bold d-block text-center harga">Rp. 15.000 - 100.000,00 </span>
+                    <span class="ms-auto text-black fw-bold d-block text-center harga">Rp. 50.000,00 </span>
                 </div>
             </div>
         </div>
@@ -164,7 +171,7 @@
                 <div class="d-none deskripsi"><p>Buat momen spesial Anda lebih berkesan dengan undangan digital yang menarik. Kami merancang undangan dengan tema yang sesuai, baik untuk acara pernikahan, ulang tahun, maupun acara formal lainnya.</p></div>
                 <div class="card-footer mt-auto d-md-flex">
                     <a class="btn btn-sm btn-primary d-block btnDetail"> Detail </a>
-                    <span class="ms-auto text-black fw-bold d-block text-center harga">Rp. 70.000,00 </span>
+                    <span class="ms-auto text-black fw-bold d-block text-center harga">Rp. 45.000,00 </span>
                 </div>
             </div>
         </div>
@@ -183,6 +190,7 @@
                 </div>
             </div>
         </div>  
+        
       </div>
 
          <!-- Tentang Kami -->
@@ -294,11 +302,23 @@
   
                 <label for="alamat">Alamat</label>
                 <input type="text" class="form-control mb-2 alamat" id="alamat">
+
+                <label for="ukuran-desain">Ukuran Desain</label>
+                <select class="form-select mb-2 ukuran-desain" id="ukuran-desain">
+                  <option value="Default">Default</option>
+                  <option value="1:1">1:1</option>
+                  <option value="3:4">3:4</option>
+                  <option value="4:3">4:3</option>
+                  <option value="16:9">16:9</option>
+                  <option value="9:16">9:16</option>
+                  <option value="2:3">2:3</option>
+                  <option value="3:2">3:2</option>
+                </select>
   
                 <label for="metode-pembayaran">Metode Pembayaran</label>
                 <select class="form-select mb-2 metode-pembayaran" id="metode-pembayaran">
-                  <option value="Cod">Cash on Delivery (COD)</option>
                   <option value="Dana">Dana (089625382065)</option>
+                  <option value="Cod">Cash on Delivery (COD)</option>
                   <option value="Rekening">Transfer Rekening 17909014495 SumselBabel</option>
                 </select>
   

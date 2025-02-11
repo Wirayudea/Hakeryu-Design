@@ -1,0 +1,7 @@
+    .title-about {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder; /* Menambahkan ketebalan teks */
+    color: #0730d4; /* Ganti dengan warna yang diinginkan */
+    text-shadow: 2px 2px 5px rgba(77, 74, 74, 0.3);
+    -webkit-text-stroke: 0.4px #ffffff;
+    }

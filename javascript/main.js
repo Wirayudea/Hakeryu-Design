@@ -35,11 +35,12 @@ document.querySelectorAll('.btnDetail').forEach(item => {
             var name = document.querySelector(".name").value;
             var alamat = document.querySelector(".alamat").value;
             var catatan = document.querySelector(".catatan").value;
+            var ukurandesain = document.querySelector(".ukuran-desain").value;
             var metodepembayaran = document.querySelector(".metode-pembayaran").value;
 
             // Menggabungkan detail produk dan informasi pengguna
             var pesan = 
-            `*Halo kak, mau pesan jasa ini*:
+            `*Halo kak, Saya mau pesan jasa ini*:
             =============================
             *Judul Desain:* ${judul}
             *Harga       :* ${harga}
@@ -47,6 +48,7 @@ document.querySelectorAll('.btnDetail').forEach(item => {
             *Data Diri*
             *Nama   :* ${name}
             *Alamat :* ${alamat}
+            *Ukuran Desain :* ${ukurandesain}
             *Metode Pembayaran :* ${metodepembayaran}
             *Catatan:* ${catatan}
             =============================

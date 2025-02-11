@@ -1,0 +1,32 @@
+.card {
+    display: inline-block; /* Membuat card hanya sebesar konten */
+    width: auto;
+}
+
+.card-img-top {
+    width: 100%; /* Mengisi lebar card */
+    height: auto; /* Menjaga proporsi gambar */
+}
+
+.title-contoh {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder; /* Menambahkan ketebalan teks */
+    color: #0730d4; /* Ganti dengan warna yang diinginkan */
+    text-shadow: 2px 2px 5px rgba(77, 74, 74, 0.3);
+    -webkit-text-stroke: 0.4px #ffffff;
+}
+
+.contoh-desain{
+    padding-left: 50px;
+    padding-bottom: 0px;
+    margin-top: 30px;
+    color:#0d84e5;
+    box-sizing: border-box;
+    font-weight: 550;
+}
+
+.row{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+}

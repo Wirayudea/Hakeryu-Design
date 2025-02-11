@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/images/title.png" type="image/x-icon">
+    <title>Hakeryu Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <!--Navbar-->
+    <div class="container-fluid p-0 mb-4 rounded-4 shadow bg-white">
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-md navbar-light shadow rounded-4 mb-4 bg-white">
+            <div class="container-fluid">
+                <!-- Logo Produk -->
+                <a class="navbar-logo fw-bold" href="/index.html">
+                    <img src="/images/Logo.jpg" alt="" class="logo-image" />
+                </a>
+        
+                <!-- Button navbar untuk small screens -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="pencarian nav-item ms-3">
+                            <div class="d-flex" style="max-width: 300px;">
+                                <input id="search-input" class="form-control form-control-sm me-2" type="search" placeholder="Cari" aria-label="Search">
+                                <button class="btn btn-outline-primary btn-sm" type="button" onclick="searchCard()">Cari</button>
+                                <button id="refresh-button" class="btn btn-outline-danger btn-sm ms-2" type="button" onclick="refreshPage()" style="display: none;">Kembali</button> <!-- Tombol Close -->
+                            </div>
+                        </li>
+                        <div id="search-results" class="mt-2"></div> <!-- Kontainer hasil -->
+                        <li class="navbartools nav-item">
+                            <a href="/index.html" class="nav-link ">Home</a>
+                        </li>
+                        <li class="navbartools nav-item">
+                          <a href="/contoh-desain.html" class="nav-link ">Contoh Desain</a>
+                        </li>
+                        <li class="navbartools nav-item">
+                            <a href="/about-us.html" class="nav-link active">About Us</a>
+                        </li>
+                        <li class="navbartools nav-item">
+                            <a href="/contact-us.html" class="nav-link ">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+    </div>
+
+        <!-- agar banner tidak tertindih navbar -->
+        <div class="px-4 mb-5" style="color: white;">
+            Spasi 
+        </div>
+
+ 
+
+         <!-- Tentang Kami -->
+        <h2 class="title-about text-center mb-4">About Us</h2>
+        <div id="Tentang" class="px-4 py-4 bg-white mb-5 shadow">
+            <div class="mx-auto ">
+                <div id="bgtentang" class="image-container">
+                    <img src="https://aryan-tayal.github.io/Mountains-Parallax/bg.jpg" class="rounded-top-img" id="bgtentang" />
+                    <div class="overlay-texttentang">
+                        <span class="text-blueh">Hakeryu</span> <span class="text-whited">Design</span>
+                    </div>
+                </div>
+                <h2> Tentang Kami </h2> 
+                        <p class="tentangkami"> Hakeryu Design hadir sebagai solusi desain grafis
+                        yang siap membantu Anda menciptakan karya visual yang selaras dengan visi, tren, serta kebutuhan bisnis Anda. 
+                        Kami menyediakan berbagai layanan, mulai dari desain logo, branding, hingga editing foto produk dan acara. 
+                        Setiap proyek yang kami tangani diperlakukan dengan sentuhan personal, didukung oleh pemahaman mendalam terhadap 
+                        kebutuhan klien, serta kreativitas yang tinggi.</p> 
+                        <p class="tujuankami">Tujuan kami adalah menghadirkan solusi visual yang tidak hanya estetis,
+                        tetapi juga efektif dalam mendukung tujuan bisnis. Dengan tim desainer berpengalaman yang berdedikasi pada 
+                        kualitas dan inovasi, Hakeryu Design siap menjadi mitra Anda dalam mewujudkan ide-ide kreatif menjadi kenyataan. 
+                        Kami berkomitmen untuk memberikan hasil yang memuaskan dan relevan, membantu bisnis Anda untuk tampil menonjol 
+                        di tengah persaingan pasar.</p> 
+                 </p>
+            </div>
+         </div> 
+         
+         <!--Cara Order-->
+         <div id="Order" class=" bg-light text-center mb-5">
+            <div class="mx-auto w-75">
+                <h3 class="cara-order"> Cara Order </h3>
+                <img src="/images/cara order.png" alt="Deskripsi Gambar" class="img-fluid shadow ukuran-gambar" />
+            </div>
+        </div>        
+        
+         <!-- Copy right -->
+          <div class="text-center p-4 border-top">&copy; 2024 Hakeryu Design - Penyedia Jasa Design Edit Foto / Gambar
+          </div>
+
+    </div>
+
+    <!-- Modal -->
+    <button type="button" class="btn btn-primary d-none btnModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       Launch demo modal
+    </button>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 modalTittle" id="exampleModalLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body row">
+          <div class="modalImage col-md-6 col-12"></div>
+          <div class="col-md-6 col-12">
+            <div class="modalDeskripsi mb-4"></div>
+            <div class="catatanModal"> "Harga bisa berubah tergantung tingkat kesulitan" </div>
+            <div class="d-md-flex flex-column">
+              <form class="w-100">
+                <h5 class="dataDiri">Data Diri Pemesanan</h5>
+                <label for="name">Nama</label>
+                <input type="text" class="form-control mb-2 name" id="name">
+  
+                <label for="alamat">Alamat</label>
+                <input type="text" class="form-control mb-2 alamat" id="alamat">
+
+                <label for="ukuran-desain">Ukuran Desain</label>
+                <select class="form-select mb-2 ukuran-desain" id="ukuran-desain">
+                  <option value="Default">Default</option>
+                  <option value="1:1">1:1</option>
+                  <option value="3:4">3:4</option>
+                  <option value="4:3">4:3</option>
+                  <option value="16:9">16:9</option>
+                  <option value="9:16">9:16</option>
+                  <option value="2:3">2:3</option>
+                  <option value="3:2">3:2</option>
+                </select>
+  
+                <label for="metode-pembayaran">Metode Pembayaran</label>
+                <select class="form-select mb-2 metode-pembayaran" id="metode-pembayaran">
+                  <option value="Dana">Dana (089625382065)</option>
+                  <option value="Cod">Cash on Delivery (COD)</option>
+                  <option value="Rekening">Transfer Rekening 17909014495 SumselBabel</option>
+                </select>
+  
+                <label for="catatan">Catatan (Request)</label>
+                <textarea class="form-control mb-2 catatan" id="catatan"></textarea>
+  
+                <button type="button" class="w-100 sendwhatsapp" onclick="sendwhatsapp();">Send Via WhatsApp</button>
+              </form>
+  
+              <a href="" target="blank" class="btn btn-sm btn-warning d-block btnPesan d-none mt-3">Pesan Jasa Ini</a>
+              <span class="ms-auto text-black fw-bold d-block text-center modalharga mt-3"></span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <script src="javascript/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('XNZu4aAblHH61Ae0x')
+    </script>
+    </body>
+</html>
